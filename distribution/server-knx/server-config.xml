@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Calimero 2 server settings -->
+<knxServer name="server">
+    <propertyDefinitionsResource id="properties.xml"/>
+    <serviceContainer name="virtual-net" routing="false" udpPort="3671" netIf="lo0">
+        <!-- 1.1.0 !-->
+        <knxAddress type="individual">4352</knxAddress>
+        <datapointsRef>datapointMap.xml</datapointsRef>
+        <knxSubnet type="virtual"></knxSubnet>
+        
+        <groupAddressFilter>
+            <knxAddress type="group">2561</knxAddress>
+            <knxAddress type="group">2562</knxAddress>
+            <knxAddress type="group">2563</knxAddress>
+            <knxAddress type="group">2564</knxAddress>
+            <knxAddress type="group">2565</knxAddress>                        
+        </groupAddressFilter>
+    </serviceContainer>
+</knxServer>        
